@@ -1,7 +1,7 @@
 import * as THREE from 'three'
 import {OrbitControls} from 'three/examples/jsm/controls/OrbitControls'
 
-import './style.css'
+import '/style.css'
 
 
 // Setup
@@ -22,7 +22,7 @@ document.body.appendChild( renderer.domElement );
 
 const geometry = new THREE.SphereGeometry( 1,100,100 );
 const material = new THREE.MeshStandardMaterial( {
-  map: new THREE.TextureLoader().load('./globe.jpeg')
+  map: new THREE.TextureLoader().load('/globe.jpeg')
 });
 
 
@@ -33,9 +33,9 @@ const loader = new THREE.CubeTextureLoader();
 // loader.setPath( './square' );
 
 const textureCube = loader.load( [
-	'./square/pixilart-drawing.png', './square/pixilart-drawing.png',
-	'./square/pixilart-drawing.png', './square/pixilart-drawing.png',
-	'./square/pixilart-drawing.png', './square/pixilart-drawing.png'
+	'/square/pixilart-drawing.png', '/square/pixilart-drawing.png',
+	'/square/pixilart-drawing.png', '/square/pixilart-drawing.png',
+	'/square/pixilart-drawing.png', '/square/pixilart-drawing.png'
 ] );
 
 const flatTex = new THREE.MeshBasicMaterial( { color: 0xffffff, envMap: textureCube } );
